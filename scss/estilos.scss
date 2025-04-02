@@ -1,0 +1,372 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* variables */
+$content-width: 100%;
+$mobile-breakpoint: 768px;
+$font-family: sans-serif;
+
+
+/* mixin */
+@mixin flexbox ($direccion, $jcontent, $align) {
+    display:flex;
+    flex-direction: $direccion;
+    justify-content: $jcontent;
+    align-items: $align;
+}
+@mixin flex ($jcontent, $align, $wrap) {
+    display:flex;
+    justify-content: $jcontent;
+    align-items: $align;
+    flex-wrap: $wrap;
+}
+@mixin flexwrap ($jcontent, $wrap) {
+    display:flex;
+    justify-content: $jcontent;
+    flex-wrap: $wrap;
+}
+
+/* extend */
+/* estilos generales independientes de la anidacion */
+.carousel-inner img{
+    width: 100vw;
+    height: auto;
+    }
+    #carouselExampleAutoplaying{
+        width: 50%;
+        margin: auto;
+    }
+
+body{
+    background-color: #ffff;
+    background-size: 100% 100%;
+    }
+
+h1{
+    color: #333;
+    font-size: 36px;
+    text-align: center;
+    border: 2px double #87ceeb;
+    padding: 10px;
+    background-color: #87ceeb;
+    margin-top: 0;
+    font-family: sans-serif;
+}
+
+h2{
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    padding-bottom: 30px;
+    font-family: sans-serif;
+}
+
+h3{
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    padding-bottom: 20px;
+    font-family: sans-serif;
+}
+
+p{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    text-align: center;
+    margin:0 auto;
+    width: 50%;
+    padding: 20px;
+    max-width: 800px;
+}
+/* anidacion cards inicio */
+main{
+    div.conteiner{
+        max-width: 1200px;
+        margin: 40px auto;
+        text-align: center;
+
+        div.card{
+            margin: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+            div.card-body{
+                padding: 20px;
+                text-align: left;
+
+                h5.card-title{
+                    font-size: 18px;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+                    p.card-text{
+                        font-size: 14px;
+                        color: #666;
+                        margin-bottom: 20px;
+
+                        .card img{
+
+                            width: 100%;
+                            height: 200px;
+                            object-fit: contain;
+                            border-top-left-radius: 10px;
+                            border-top-right-radius: 10px;
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+    }
+    /* footer */
+    footer{
+        .footer{
+            background-color: #333;
+            color: #ffff;
+            padding: 20px;
+            text-align: center;
+
+            div.footer-contenedor{
+                max-width: 1200px;
+                margin: 0 auto;
+
+                div.informacion-contacto{
+                    @include flex(center, center, wrap);
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    background-color: #333;
+                    color: #fff;
+                    padding: 20px;
+
+                        div.footer-redes-sociales{
+                            list-style: none;
+                            padding: 0;
+                            margin: 0;
+                            display: flex;
+                            justify-content: center;
+
+                            div.derechos-autor{
+
+                                div.footer-redes-sociales li{
+
+                                    margin: 0 20px;
+                                    div.footer-redes-sociales img{
+                                        width: 30px;
+                                        height: 30px;
+                                        border-radius: 50%;       
+                                    }
+
+                                }
+
+                            }
+                            
+                    }
+
+                }
+
+            }
+
+        }
+    }
+    /* productos */
+main.productos{
+    section.productos{
+
+        div.fotos-conteiner{
+            @include flexwrap(center, wrap );
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+
+            div.foto-conteiner{
+
+                width: calc(33.33% - 20px);
+                margin: 10px;
+                padding: 45px;
+                border: 1px solid #ddd;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                position: relative;
+
+                .foto-conteiner img{
+
+                    width: 100%;
+                    height: 150px;
+                    object-fit: cover;
+                    border-radius: 10px 10px 0 0;
+                    max-width: 100%;
+                    height: auto;
+
+                }
+
+            }
+
+        }
+
+    }
+}
+main.envios{
+    section.envios{
+        max-width: 800px;
+margin: 40px auto;
+padding: 20px;
+border: 1px solid #ddd;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+            .label{
+                display:block ;
+                margin-bottom: 10px;
+
+                .select input{
+                    [type="text"]{
+                        width: 100%;
+                        height: 40px;
+                        padding: 10px;
+                        font-size: 16px;
+                        border: 1px solid #ccc;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+    /* donde estamos iframe */
+    .contenedor-iframe{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 500px;
+
+        .contenedor-iframe iframe{
+
+            width: 100%;
+            height: 100%;
+            border: none;
+
+        }
+        
+    }
+    /* redes de contacto */
+    main.contactos{
+
+        div.redes-sociales{
+            text-align: center;
+            margin:20px auto;
+
+            .redes-sociales a{
+                display: inline-block;
+                margin: 10px;
+
+                .redes-sociales img{
+
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    transition: transform 0.2s ease-in-out;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+    main.form.formulario-contacto{
+        @include flexbox(column, center, center);
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        margin: 0 auto;
+        width: 50%;
+        padding-bottom: 20px;
+        box-shadow: 0 0 10px rgba(0, 0,0, 0.1);
+        margin-bottom: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        label{
+            margin-bottom: 10px;
+
+            input{
+
+                textarea{
+                    width: 100%;
+                    padding: 10px;
+                    margin-bottom: 20px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+
+                    button{
+                        [type="submit"]{
+                            background-color: #333;
+                            color: #fff;
+                            width: 100%;
+                            padding: 5px 10px;
+                            font-size: 14px;
+                            border: none;
+                            border-radius: 5px;
+                            cursor: pointer;
+                        }
+
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+    /* nosotros */
+    main.nosotros{
+        @include flexbox(column, center, center);
+        padding: 50%;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0, 0.1);
+
+        h1{
+            font-size: 36px;
+            margin-bottom: 20px;
+
+            h2{
+                font-size: 24px;
+                margin-bottom: 20px;
+
+                p{
+                    font-size: 18px;
+                    font-family: sans-serif;
+                    margin-bottom: 20px;
+                    text-align: justify;
+
+                    img{
+                        width: 50%;
+                        height: auto;
+                        margin: 20px auto;
+                        border-radius: 10px;
+
+
+                    }
+
+                }
+
+            }
+
+        }
+    }

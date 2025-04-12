@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #fff;
+  background-color: #bdecb6;
   background-size: 100% 100%;
 }
 
@@ -20,6 +20,7 @@ body {
   background-color: #333;
   color: #fff;
   padding: 1rem;
+  font-family: sans-serif;
 }
 .nav-bar li {
   margin-right: 20px;
@@ -99,24 +100,23 @@ h3 {
 .foto-conteiner img {
   width: 100%;
   height: 200px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 10px 10px 0 0;
   max-width: 100%;
 }
 
 .ver-mas-btn {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  padding: 10px 20px;
+  margin-top: 5px;
+  padding: 10px;
   background-color: #333;
   color: #fff;
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 .ver-mas-btn:hover {
-  background-color: rgb(25.5, 25.5, 25.5);
+  background-color: darken #333, 10%;
 }
 
 @media (max-width: 767px) {
@@ -272,8 +272,7 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: #333;
-  color: #fff;
+  color: #333;
   text-align: center;
   padding: 20px;
 }
@@ -322,6 +321,7 @@ iframe {
 @media (max-width: 767px) {
   .footer-redes-sociales {
     flex-direction: column;
+    align-items: center;
   }
   .footer-redes-sociales li {
     margin: 20px 0;
@@ -505,79 +505,67 @@ input[type=text] {
 }
 
 .barra-inferior {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  padding: 10px;
-  background-color: #f0f0f0;
-  border-bottom: 1px solid #ddd;
-  box-sizing: border-box;
-}
-.barra-inferior .login {
-  grid-column: 1;
-  text-align: left;
-}
-.barra-inferior .login form {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #f0f0f0;
-  border-radius: 5px;
-  padding: 5px;
+  justify-content: space-evenly;
+  padding: 20px;
 }
-.barra-inferior .login form label {
-  margin-bottom: 10px;
+@media (max-width: 768px) {
+  .barra-inferior {
+    flex-direction: column;
+    align-items: center;
+  }
 }
-.barra-inferior .login form input {
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
+.barra-inferior .login-section {
+  width: 45%;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border: 1px solid #ddd;
   border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.barra-inferior .login form button[type=submit] {
+@media (max-width: 768px) {
+  .barra-inferior .login-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+.barra-inferior h2 {
+  margin-top: 0;
+}
+.barra-inferior form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.barra-inferior form input[type=text], .barra-inferior form input[type=email],
+.barra-inferior form input[type=password] {
+  width: 100%;
+  height: 40px;
   margin-bottom: 20px;
-  padding: 10px 5px;
-  background-color: #337ab7;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+.barra-inferior form button[type=submit] {
+  width: 100%;
+  height: 40px;
+  background-color: #4CAF50;
   color: #fff;
+  padding: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
-.barra-inferior .login form button[type=submit]:hover {
-  background-color: #23527c;
-}
-.barra-inferior .carrito {
+
+.carrito {
   grid-column: 2;
   text-align: right;
 }
-.barra-inferior .carrito a {
+.carrito a {
   text-decoration: none;
   color: #337ab7;
 }
-.barra-inferior .carrito a:hover {
+.carrito a:hover {
   color: #23527c;
-}
-@media (max-width: 767px) {
-  .barra-inferior {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  .barra-inferior {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-}
-@media (min-width: 1024px) {
-  .barra-inferior {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
 }
 
 .contenedor-iframe {

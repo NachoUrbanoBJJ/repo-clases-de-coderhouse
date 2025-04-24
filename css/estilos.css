@@ -107,8 +107,8 @@ h3 {
 
 .ver-mas-btn {
   margin-top: 5px;
-  padding: 10px;
-  background-color: #333;
+  margin-bottom: 5px;
+  background-color: #4CAF50;
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -179,10 +179,10 @@ h3 {
   background-color: #f9f9f9;
   border: 1px solid #ccc;
   border-radius: 10px;
-  width: 50%;
+  width: 70%;
   padding-bottom: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .formulario-contacto label {
@@ -192,7 +192,7 @@ h3 {
 .formulario-contacto textarea {
   width: 100%;
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
@@ -209,20 +209,20 @@ h3 {
 
 @media (max-width: 767px) {
   .formulario-contacto {
+    padding: 5px;
+  }
+  .formulario-contacto input,
+  .formulario-contacto textarea {
+    padding: 3px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .formulario-contacto {
     padding: 10px;
   }
   .formulario-contacto input,
   .formulario-contacto textarea {
     padding: 5px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  .formulario-contacto {
-    padding: 20px;
-  }
-  .formulario-contacto input,
-  .formulario-contacto textarea {
-    padding: 10px;
   }
 }
 @media (min-width: 1024px) {
@@ -267,6 +267,7 @@ iframe {
 }
 
 .informacion-contacto {
+  background-color: #87ceeb;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -279,6 +280,7 @@ iframe {
 @media (max-width: 767px) {
   .informacion-contacto {
     flex-direction: column;
+    word-wrap: break-word;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -293,7 +295,7 @@ iframe {
 }
 
 .footer {
-  background-color: #333;
+  background-color: #87ceeb;
   color: #fff;
   padding: 20px;
 }
@@ -342,6 +344,21 @@ iframe {
   .footer-redes-sociales li {
     margin: 0 20px;
   }
+}
+
+.parrafos-footer {
+  width: 70%;
+  max-width: 500px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.enlaces-redes-sociales {
+  background-color: #87ceeb;
 }
 
 #envios {
@@ -407,8 +424,8 @@ input[type=text] {
 }
 .nosotros img {
   width: 50%;
+  margin: 5px auto;
   height: auto;
-  margin: 20px auto;
   border-radius: 10px;
 }
 @media (max-width: 767px) {
@@ -556,18 +573,6 @@ input[type=text] {
   cursor: pointer;
 }
 
-.carrito {
-  grid-column: 2;
-  text-align: right;
-}
-.carrito a {
-  text-decoration: none;
-  color: #337ab7;
-}
-.carrito a:hover {
-  color: #23527c;
-}
-
 .contenedor-iframe {
   display: flex;
   justify-content: center;
@@ -659,6 +664,20 @@ input[type=text] {
   }
   .conteiner .card img {
     height: 200px;
+  }
+}
+.imagen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .imagen {
+    width: 55%;
   }
 }
 

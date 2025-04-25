@@ -52,7 +52,6 @@ $bp-card-large: 1200px;
 body {
   background-color:#bdecb6;
   background-size: 100% 100%;
-  overflow-x: hidden;
   max-width: 100%;
   box-sizing: border-box;
 }
@@ -578,6 +577,79 @@ input[type="text"] {
      }
     }
   
+    // Login y Carrito: Barra Inferior
+.barra-inferior {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 10px;
+  background-color: $light-gray;
+  border-bottom: 1px solid $border-color;
+  box-sizing: border-box; 
+
+  .login {
+    grid-column: 1;
+    text-align: left;
+
+    form {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      background-color: $light-gray;
+      border-radius: 5px;
+      padding: 5px;
+      label {
+        margin-bottom: 10px;
+      }
+      input {
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid $gray;
+        border-radius: 10px;
+      }
+      button[type="submit"] {
+        margin-bottom: 20px;
+        padding: 10px 5px;
+        background-color: #337ab7;
+        color: $white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+          background-color: #23527c;
+        }
+      }
+    }
+  }
+  .carrito {
+    grid-column: 2;
+    text-align: right;
+    a {
+      text-decoration: none;
+      color: #337ab7;
+      &:hover {
+        color: #23527c;
+      }
+    }
+  }
+
+  @include respond-to(small) {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  @include respond-to(medium) {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  @include respond-to(large) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
 // Iframe "dónde estamos"
 .contenedor-iframe {
   display: flex;

@@ -6,7 +6,6 @@ iframe, p, .formulario-contacto, h3, h2, h1, .nav-bar li {
 body {
   background-color: #bdecb6;
   background-size: 100% 100%;
-  overflow-x: hidden;
   max-width: 100%;
   box-sizing: border-box;
 }
@@ -528,6 +527,82 @@ form button[type=submit] {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.barra-inferior {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+}
+.barra-inferior .login {
+  grid-column: 1;
+  text-align: left;
+}
+.barra-inferior .login form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  padding: 5px;
+}
+.barra-inferior .login form label {
+  margin-bottom: 10px;
+}
+.barra-inferior .login form input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.barra-inferior .login form button[type=submit] {
+  margin-bottom: 20px;
+  padding: 10px 5px;
+  background-color: #337ab7;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.barra-inferior .login form button[type=submit]:hover {
+  background-color: #23527c;
+}
+.barra-inferior .carrito {
+  grid-column: 2;
+  text-align: right;
+}
+.barra-inferior .carrito a {
+  text-decoration: none;
+  color: #337ab7;
+}
+.barra-inferior .carrito a:hover {
+  color: #23527c;
+}
+@media (max-width: 767px) {
+  .barra-inferior {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .barra-inferior {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  .barra-inferior {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
 }
 
 .contenedor-iframe {

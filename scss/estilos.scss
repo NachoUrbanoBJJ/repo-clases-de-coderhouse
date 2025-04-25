@@ -578,78 +578,72 @@ input[type="text"] {
     }
   
     // Login y Carrito: Barra Inferior
+// Estilos generales
 .barra-inferior {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  padding: 10px;
-  background-color: $light-gray;
-  border-bottom: 1px solid $border-color;
-  box-sizing: border-box; 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 40px 20px;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #ddd;
 
-  .login {
-    grid-column: 1;
-    text-align: left;
+  .login-section {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 22px;
+      color: #333;
+      text-align: center;
+    }
 
     form {
       display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      background-color: $light-gray;
-      border-radius: 5px;
-      padding: 5px;
-      label {
-        margin-bottom: 10px;
-      }
+      flex-direction: column;
+      gap: 15px;
+
       input {
-        padding: 10px;
-        margin-bottom: 20px;
-        border: 1px solid $gray;
-        border-radius: 10px;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: border-color 0.3s;
+
+        &:focus {
+          border-color: #4CAF50;
+          outline: none;
+        }
       }
+
       button[type="submit"] {
-        margin-bottom: 20px;
-        padding: 10px 5px;
-        background-color: #337ab7;
-        color: $white;
+        padding: 12px;
+        background-color: #4CAF50;
+        color: #fff;
         border: none;
-        border-radius: 5px;
+        border-radius: 8px;
+        font-size: 16px;
         cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        transition: background-color 0.3s;
+
         &:hover {
-          background-color: #23527c;
+          background-color: #45a049;
         }
       }
     }
   }
-  .carrito {
-    grid-column: 2;
-    text-align: right;
-    a {
-      text-decoration: none;
-      color: #337ab7;
-      &:hover {
-        color: #23527c;
-      }
-    }
-  }
+}
 
-  @include respond-to(small) {
+// Estilos para pantallas pequeñas
+@media (max-width: 576px) {
+  .barra-inferior {
+    padding: 20px 10px;
     grid-template-columns: 1fr;
-    gap: 10px;
-  }
-  @include respond-to(medium) {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-  @include respond-to(large) {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
   }
 }
+
 // Iframe "dónde estamos"
 .contenedor-iframe {
   display: flex;
@@ -767,3 +761,44 @@ input[type="text"] {
 width: 55%;
   }
   }
+  .custom-navbar {
+    background-color: #2c2c2c;
+  
+    .navbar-nav .nav-link {
+      color: #fff !important;
+  
+      &:hover {
+        color: #4CAF50 !important;
+      }
+    }
+  
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 20px;
+    }
+  
+    .search-form {
+      align-items: center;
+  
+      .search-input {
+        border: none;
+        border-radius: 30px;
+        padding: 8px 15px;
+        font-size: 14px;
+        width: 180px;
+        transition: all 0.3s ease-in-out;
+  
+        &:focus {
+          outline: none;
+          box-shadow: 0 0 0 2px #4CAF50;
+        }
+      }
+  
+      .btn-success {
+        border-radius: 30px;
+        padding: 8px 15px;
+        margin-left: 10px;
+      }
+    }
+  }
+  

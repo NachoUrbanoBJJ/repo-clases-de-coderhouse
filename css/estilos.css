@@ -531,80 +531,60 @@ form button[type=submit] {
 
 .barra-inferior {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  padding: 10px;
-  background-color: #f0f0f0;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 40px 20px;
+  background-color: #f2f2f2;
   border-bottom: 1px solid #ddd;
-  box-sizing: border-box;
 }
-.barra-inferior .login {
-  grid-column: 1;
-  text-align: left;
+.barra-inferior .login-section {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-.barra-inferior .login form {
+.barra-inferior .login-section h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #333;
+  text-align: center;
+}
+.barra-inferior .login-section form {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #f0f0f0;
-  border-radius: 5px;
-  padding: 5px;
+  flex-direction: column;
+  gap: 15px;
 }
-.barra-inferior .login form label {
-  margin-bottom: 10px;
-}
-.barra-inferior .login form input {
-  padding: 10px;
-  margin-bottom: 20px;
+.barra-inferior .login-section form input {
+  padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s;
 }
-.barra-inferior .login form button[type=submit] {
-  margin-bottom: 20px;
-  padding: 10px 5px;
-  background-color: #337ab7;
+.barra-inferior .login-section form input:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+.barra-inferior .login-section form button[type=submit] {
+  padding: 12px;
+  background-color: #4CAF50;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
+  font-size: 16px;
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  transition: background-color 0.3s;
 }
-.barra-inferior .login form button[type=submit]:hover {
-  background-color: #23527c;
-}
-.barra-inferior .carrito {
-  grid-column: 2;
-  text-align: right;
-}
-.barra-inferior .carrito a {
-  text-decoration: none;
-  color: #337ab7;
-}
-.barra-inferior .carrito a:hover {
-  color: #23527c;
-}
-@media (max-width: 767px) {
-  .barra-inferior {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  .barra-inferior {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-}
-@media (min-width: 1024px) {
-  .barra-inferior {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
+.barra-inferior .login-section form button[type=submit]:hover {
+  background-color: #45a049;
 }
 
+@media (max-width: 576px) {
+  .barra-inferior {
+    padding: 20px 10px;
+    grid-template-columns: 1fr;
+  }
+}
 .contenedor-iframe {
   display: flex;
   justify-content: center;
@@ -711,6 +691,39 @@ form button[type=submit] {
   .imagen {
     width: 55%;
   }
+}
+.custom-navbar {
+  background-color: #2c2c2c;
+}
+.custom-navbar .navbar-nav .nav-link {
+  color: #fff !important;
+}
+.custom-navbar .navbar-nav .nav-link:hover {
+  color: #4CAF50 !important;
+}
+.custom-navbar .navbar-brand {
+  font-weight: bold;
+  font-size: 20px;
+}
+.custom-navbar .search-form {
+  align-items: center;
+}
+.custom-navbar .search-form .search-input {
+  border: none;
+  border-radius: 30px;
+  padding: 8px 15px;
+  font-size: 14px;
+  width: 180px;
+  transition: all 0.3s ease-in-out;
+}
+.custom-navbar .search-form .search-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #4CAF50;
+}
+.custom-navbar .search-form .btn-success {
+  border-radius: 30px;
+  padding: 8px 15px;
+  margin-left: 10px;
 }
 
 /*# sourceMappingURL=estilos.css.map */

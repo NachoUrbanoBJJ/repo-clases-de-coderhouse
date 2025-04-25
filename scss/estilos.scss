@@ -52,6 +52,9 @@ $bp-card-large: 1200px;
 body {
   background-color:#bdecb6;
   background-size: 100% 100%;
+  overflow-x: hidden;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 // Nav-Bar
@@ -547,30 +550,6 @@ input[type="text"] {
   }
 }
 
-// Login y Carrito: Barra Inferior
-.barra-inferior {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 20px;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
-    }
-
-  .login-section{
-  width: 45%;
-  background-color: #f7f7f7;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-
-  @media (max-width: 768px) {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  }
   h2{
     margin-top: 0;
   }
@@ -598,7 +577,7 @@ input[type="text"] {
       cursor: pointer; 
      }
     }
-  }
+  
 // Iframe "dónde estamos"
 .contenedor-iframe {
   display: flex;
@@ -615,7 +594,7 @@ input[type="text"] {
 }
 
 // Cards de inicio
-.conteiner {
+.container {
   max-width: 1200px;
   margin: 40px auto;
   text-align: center;
